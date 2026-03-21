@@ -1,5 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # reads backend/.env automatically
+
 from app.routes import projects, skills, experience, contact
 
 app = FastAPI(
@@ -8,14 +13,13 @@ app = FastAPI(
     version="1.0.0",
 )
 
+# Read allowed origins from .env — comma separated
+raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173")
+allowed_origins = [o.strip() for o in raw_origins.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:4173",
-        "https://saiprajapati.dev",        # update with your domain
-        "https://sai-portfolio.vercel.app", # update with Vercel URL
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,9 +33,10 @@ app.include_router(contact.router)
 
 @app.get("/api/health", tags=["health"])
 async def health():
-    return {"status": "ok", "message": "Sai's portfolio API is running"}
+    env = os.getenv("ENVIRONMENT", "development")
+    return {"status": "ok", "environment": env}
 
 
 @app.get("/", tags=["root"])
 async def root():
-    return {"message": "Welcome to Sai Prajapati's Portfolio API. Visit /docs for API documentation."}
+    return {"message": "Sai Prajapati Portfolio API. Visit /docs for documentation."}
