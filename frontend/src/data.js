@@ -23,25 +23,26 @@ export const personal = {
   graduationYear: "2027",
   minor: "IIT Mandi — Minor in CSE & Advanced Technologies",
   available: true,
+  resumeUrl: "https://drive.google.com/uc?export=download&id=1LPaVN6y2cyqCU_EYiUwuzpV1_HEFi3iA",
 };
 
 export const skills = [
   // Languages
-  { name: "Python",       category: "Languages",  level: 90 },
-  { name: "JavaScript",   category: "Languages",  level: 75 },
-  { name: "C++",          category: "Languages",  level: 70 },
+  { name: "Python",       category: "Languages",  level: 87 },
+  { name: "JavaScript",   category: "Languages",  level: 79 },
+  { name: "C++",          category: "Languages",  level: 84 },
   { name: "Java",         category: "Languages",  level: 65 },
-  { name: "SQL",          category: "Languages",  level: 72 },
+  { name: "SQL",          category: "Languages",  level: 83},
 
   // ML / AI
-  { name: "scikit-learn", category: "ML & AI",    level: 85 },
-  { name: "TensorFlow",   category: "ML & AI",    level: 72 },
+  { name: "scikit-learn", category: "ML & AI",    level: 75 },
+  { name: "TensorFlow",   category: "ML & AI",    level: 60 },
   { name: "PyTorch",      category: "ML & AI",    level: 68 },
-  { name: "OpenCV",       category: "ML & AI",    level: 80 },
-  { name: "Pandas / NumPy", category: "ML & AI",  level: 88 },
+  { name: "OpenCV",       category: "ML & AI",    level: 72 },
+  { name: "Pandas / NumPy", category: "ML & AI",  level: 80 },
 
   // Backend
-  { name: "Node.js",      category: "Backend",    level: 78 },
+  { name: "Node.js",      category: "Backend",    level: 85 },
   { name: "Express.js",   category: "Backend",    level: 78 },
   { name: "REST APIs",    category: "Backend",    level: 85 },
   { name: "FastAPI",      category: "Backend",    level: 70 },
@@ -52,8 +53,8 @@ export const skills = [
 
   // Tools
   { name: "Git / GitHub", category: "Tools",      level: 88 },
-  { name: "Linux",        category: "Tools",      level: 75 },
-  { name: "Postman",      category: "Tools",      level: 82 },
+  { name: "Linux",        category: "Tools",      level: 68 },
+  { name: "Postman",      category: "Tools",      level: 78 },
   { name: "Docker",       category: "Tools",      level: 55 },
 ];
 

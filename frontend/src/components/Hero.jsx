@@ -167,7 +167,7 @@ export default function Hero() {
               View Projects
             </button>
             <a
-              href="/Sai_Prajapati_Resume.pdf"
+              href={personal.resumeUrl}
               download
               className="btn-outline"
             >

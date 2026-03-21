@@ -134,7 +134,7 @@ export default function About() {
               ))}
             </motion.div>
 
-            <motion.a {...fadeUp(0.4)} href="/Sai_Prajapati_Resume.pdf" download className="btn-primary"
+            <motion.a {...fadeUp(0.4)} href={personal.resumeUrl} download className="btn-primary"
                style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               <Download size={14} />
               Download Resume
